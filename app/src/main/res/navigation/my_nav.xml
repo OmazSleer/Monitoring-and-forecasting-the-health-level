@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.omazapp.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_updateFieldOfList"
+            app:destination="@id/updateFieldOfList" />
+        <action
+            android:id="@+id/action_historyFragment_to_createFieldOfList"
+            app:destination="@id/createFieldOfList" />
+        <action
+            android:id="@+id/action_historyFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_pulseGraphFragment"
+            app:destination="@id/pulseGraphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.omazapp.fragments.RegistrationFragment"
+        android:label="fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.omazapp.fragments.MainFragment"
+        android:label="fragment_main"
+
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_authentificationFragment"
+            app:destination="@id/authentificationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authentificationFragment"
+        android:name="com.example.omazapp.fragments.AuthentificationFragment"
+        android:label="fragment_authentification"
+        tools:layout="@layout/fragment_authentification" >
+        <action
+            android:id="@+id/action_authentificationFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.example.omazapp.fragments.GeneralFragment"
+        android:label="fragment_general"
+        tools:layout="@layout/fragment_general" >
+        <action
+            android:id="@+id/action_generalFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_generalFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_generalFragment_to_pulseGraphFragment"
+            app:destination="@id/pulseGraphFragment" />
+        <action
+            android:id="@+id/action_generalFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+        <argument
+            android:name="testResult"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.omazapp.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.omazapp.data.user.User" />
+        <action
+            android:id="@+id/action_profileFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_pulseGraphFragment"
+            app:destination="@id/pulseGraphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFieldOfList"
+        android:name="com.example.omazapp.fragments.CreateFieldOfList"
+        android:label="fragment_create_field_of_list"
+        tools:layout="@layout/fragment_create_field_of_list">
+        <action
+            android:id="@+id/action_createFieldOfList_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFieldOfList"
+        android:name="com.example.omazapp.fragments.UpdateFieldOfList"
+        android:label="fragment_update_field_of_list"
+        tools:layout="@layout/fragment_update_field_of_list" >
+        <action
+            android:id="@+id/action_updateFieldOfList_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <argument
+            android:name="currentMeasurement"
+            app:argType="com.example.omazapp.data.measurement.Measurement" />
+    </fragment>
+    <fragment
+        android:id="@+id/pulseGraphFragment"
+        android:name="com.example.omazapp.PulseGraphFragment"
+        android:label="fragment_pulse_graph"
+        tools:layout="@layout/fragment_pulse_graph" >
+        <action
+            android:id="@+id/action_pulseGraphFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+        <action
+            android:id="@+id/action_pulseGraphFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_pulseGraphFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.omazapp.fragments.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_testFragment_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_reference"
+        android:title="Help"
+        android:icon="@drawable/ic_help"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_save"
+        android:title="Ok"
+        android:icon="@drawable/ic_ok"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always"/>
+</menu>

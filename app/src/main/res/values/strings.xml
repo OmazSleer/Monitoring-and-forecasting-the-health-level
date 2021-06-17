@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OmazApp</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string name="ysloviya_raboti">Working conditions</string>
+        <string name="ydobstva_rabochego_mesta">Convenience of the workplace</string>
+        <string name="stepen_osveshennosti">Room illumination degree</string>
+        <string name="temperatura">Air temperature</string>
+        <string name="vrednie_factori">Presence of harmful factors</string>
+        <string name="socialnii_climat">Social climate</string>
+        <string name="temp_raboti">Pace of work</string>
+        <string name="samochyvstvie">Wellbeing</string>
+        <string name="nastroenie">Mood</string>
+        <string name="motivaciya">Motivation</string>
+        <string name="emotional_stable">Emotional resilience</string>
+
+
+
+</resources>
